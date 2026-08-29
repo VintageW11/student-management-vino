@@ -1,5 +1,7 @@
 # Student Management Application
 
+**Repository name:** `student-management-vino`
+
 ## Student Information
 Name: YOUR NAME
 Course/Section: YOUR COURSE AND SECTION
@@ -9,6 +11,9 @@ This project is a simple Student Management Application
 created using HTML, CSS, JavaScript, Node.js, and Express.js.
 The application was developed and executed using
 GitHub Codespaces.
+
+Target GitHub repository for submission:
+`https://github.com/YOUR_USERNAME/student-management-vino`
 
 ## Features
 - View students
