@@ -3,7 +3,7 @@
 **Repository name:** `student-management-vino`
 
 ## Student Information
-Name: VINO, RODRIGO JR. D>
+Name: VINO, RODRIGO JR. D.
 Course/Section: BSIT-NETAD CCIS7E
 
 ## Project Description
