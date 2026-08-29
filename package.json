@@ -1,0 +1,20 @@
+{
+  "name": "student-management",
+  "version": "1.0.0",
+  "description": "Simple Student Management Application for Cloud Application Deployment activity",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "express",
+    "students",
+    "codespaces"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
