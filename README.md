@@ -13,7 +13,7 @@ The application was developed and executed using
 GitHub Codespaces.
 
 Target GitHub repository for submission:
-`https://github.com/YOUR_USERNAME/student-management-vino`
+`https://github.com/VintageW11/student-management-vino`
 
 ## Features
 - View students
