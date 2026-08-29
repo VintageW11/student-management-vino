@@ -1,7 +1,7 @@
 {
   "name": "student-management",
   "version": "1.0.0",
-  "description": "Simple Student Management Application for Cloud Application Deployment activity",
+  "description": "Simple Student Management Application for Cloud Application Deployment using GitHub Codespaces",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",

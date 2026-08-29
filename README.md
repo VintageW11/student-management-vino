@@ -1,122 +1,82 @@
 # Student Management Application
 
-A simple **Student Management** web app for the Cloud Application Deployment activity using Node.js, Express.js, HTML, CSS, and JavaScript.
+## Student Information
+Name: YOUR NAME
+Course/Section: YOUR COURSE AND SECTION
 
-You can **view**, **add**, **edit**, and **delete** sample student records. Records are stored **in memory only** (no database). They reset when the server restarts.
-
-> Use sample student information only. Do not store real confidential student records, passwords, API keys, or other secrets.
+## Project Description
+This project is a simple Student Management Application
+created using HTML, CSS, JavaScript, Node.js, and Express.js.
+The application was developed and executed using
+GitHub Codespaces.
 
 ## Features
+- View students
+- Add students
+- Edit students
+- Delete students
 
-- View all students in a searchable table
-- Add a new student
-- Edit an existing student
-- Delete a student (with confirmation)
-- In-memory sample data that disappears on restart
+## Technologies Used
+- HTML
+- CSS
+- JavaScript
+- Node.js
+- Express.js
+- GitHub
+- GitHub Codespaces
 
-## Requirements
-
-- Node.js 18+ (Codespaces and most modern environments include this)
-- npm
-
-## Run locally
-
+## How to Run
 ```bash
 npm install
-npm start
+node server.js
 ```
+Open the app on port 3000 (Codespaces: PORTS tab → Open in Browser).
 
-Open [http://127.0.0.1:3847](http://127.0.0.1:3847).
+## Cloud Networking
+The application runs inside GitHub Codespaces.
+The Node.js server listens on port 3000.
+GitHub Codespaces forwards the application port so
+that the web application can be accessed through
+a browser.
 
-The app binds to `0.0.0.0` on port **3847** so it works in local browsers and cloud preview URLs (including GitHub Codespaces port forwarding).
+## Cloud Security
+Basic cloud security practices used in this activity include:
+- No real student information was used.
+- No passwords were stored in the source code.
+- No API keys or credentials were committed.
+- Port visibility was reviewed before sharing the application.
 
-Optional: set a different port with an environment variable:
+## Shared Responsibility Model
+GitHub manages the underlying cloud infrastructure
+used by GitHub Codespaces.
+As the application developer, I am responsible for
+the application code, repository access, credentials,
+port configuration, and information stored or processed
+by the application.
 
-```bash
-PORT=3000 npm start
-```
+## Reflection Questions
 
-## Run in GitHub Codespaces
+### 1. What is the role of GitHub Codespaces in this activity?
+GitHub Codespaces provides a cloud-based development environment, similar to Visual Studio Code, where I can create, run, and test the Student Management Application without setting up Node.js on my own computer.
 
-1. Push this project to a public GitHub repository named like `student-management-lastname`.
-2. In the repository, click **Code → Codespaces → Create codespace on main**.
-3. In the Codespace terminal:
+### 2. What is the purpose of port 3000?
+Port 3000 is the network endpoint used by the Node.js and Express server. The browser connects to this port (through Codespaces port forwarding) to load the web application and call the student API.
 
-```bash
-npm install
-npm start
-```
+### 3. What may happen when the application port is made public?
+When the port is public, people outside the Codespace who have the forwarded URL may be able to access the application over the Internet. That can expose the app and its data, so ports should stay private unless public access is required.
 
-4. When the server starts, Codespaces will offer to open the forwarded port (3847). Use **Open in Browser**.
+### 4. Which parts of the environment are handled by GitHub
+or the cloud provider?
+GitHub or the cloud provider handles the physical servers, data centers, underlying infrastructure, Codespaces platform, and physical networking.
 
-### How the app is reached through a network port
+### 5. Which parts are your responsibility as the
+application developer?
+I am responsible for the application code, repository access, data entered into the app, port visibility, credentials, application configuration, and avoiding exposed secrets.
 
-1. Express listens on a **TCP port** (default `3847`).
-2. Your browser sends HTTP requests to that host and port.
-3. In Codespaces, GitHub **forwards** the container port to a public or private preview URL.
-4. The HTML/CSS/JS front end calls the `/api/students` endpoints on the same origin.
+### 6. Why should passwords, API keys, and other secrets
+not be uploaded to a public GitHub repository?
+Anyone can view or copy a public repository. If passwords, API keys, or other secrets are uploaded, they can be stolen and misused, which can lead to unauthorized access and security incidents.
 
-Without an open/listening port, the browser cannot reach the Node process.
-
-## API overview
-
-| Method | Path | Description |
-|--------|------|-------------|
-| `GET` | `/api/students` | List all students |
-| `GET` | `/api/students/:id` | Get one student |
-| `POST` | `/api/students` | Create a student |
-| `PUT` | `/api/students/:id` | Update a student |
-| `DELETE` | `/api/students/:id` | Delete a student |
-
-Example create body:
-
-```json
-{
-  "studentId": "2024-1004",
-  "firstName": "Jamie",
-  "lastName": "Cruz",
-  "course": "BSIT",
-  "yearLevel": 2,
-  "email": "jamie.cruz@example.edu"
-}
-```
-
-## Basic cloud security practices applied here
-
-- Sample data only — no real student PII
-- No passwords, API keys, or secrets in the repo
-- Input validation on create/update (required fields, year range, email format, unique student ID)
-- HTML escaping in the UI to reduce XSS risk from stored text
-- Keep the Codespace and repository public only when the activity requires it; avoid uploading private credentials
-
-## Shared Responsibility Model (GitHub Codespaces example)
-
-Cloud platforms and users share security duties.
-
-| Area | GitHub / cloud provider | You (student / app owner) |
-|------|-------------------------|---------------------------|
-| Physical data centers, hosts, hypervisor | Responsible | — |
-| Codespaces VM image, networking fabric, port-forward platform | Responsible | — |
-| Account access (GitHub login, 2FA, who can open the Codespace) | Provides controls | You must protect your account and invite only trusted collaborators |
-| Application code and dependencies | — | You write safe code, keep packages updated, avoid secrets in git |
-| Data placed in the app | — | You choose sample data only; do not upload confidential records |
-| What is exposed via forwarded ports | Provides private/public visibility options | You decide who can open the preview and what the app serves |
-
-**In short:** GitHub secures the Codespaces infrastructure. You secure your account, your application, and the data you put into it.
-
-## Project structure
-
-```text
-.
-├── package.json
-├── server.js          # Express server + in-memory API
-├── public/
-│   ├── index.html     # UI
-│   ├── styles.css     # Styles
-│   └── app.js         # Front-end CRUD logic
-└── README.md
-```
-
-## Activity submission note
-
-After pushing to GitHub, submit your **repository link** as required by your course. Rename the repo to match `student-management-lastname` if your instructor requires that format.
+### 7. How does this activity demonstrate the
+Shared Responsibility Model?
+GitHub provides and secures the Codespaces cloud environment, while I remain responsible for writing the application safely, using only sample student data, protecting my account, checking port visibility, and never committing secrets. Both sides share responsibility for keeping the cloud application secure.
