@@ -1,5 +1,5 @@
 {
-  "name": "student-management",
+  "name": "student-management-vino",
   "version": "1.0.0",
   "description": "Simple Student Management Application for Cloud Application Deployment using GitHub Codespaces",
   "main": "server.js",
